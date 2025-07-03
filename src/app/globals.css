@@ -1,0 +1,35 @@
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* WhatsApp floating form animation and layering */
+.wa-float-in {
+  z-index: 1050 !important;
+  box-shadow: 0 8px 32px 0 rgba(34,197,94,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  pointer-events: auto;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+}
+.wa-float-out {
+  z-index: 1050 !important;
+  box-shadow: 0 8px 32px 0 rgba(34,197,94,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+}
+
+.whatsapp-fab {
+  z-index: 1100 !important;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  box-shadow: 0 4px 16px 0 rgba(34,197,94,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  .wa-float-in, .wa-float-out {
+    max-width: 95vw !important;
+    left: 2.5vw !important;
+    right: 2.5vw !important;
+  }
+}
